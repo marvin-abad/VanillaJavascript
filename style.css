@@ -56,3 +56,11 @@ body, .input {
 .input:focus {
     border-color: rgb(208, 208, 224);
 }
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
