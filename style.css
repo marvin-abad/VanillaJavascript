@@ -10,3 +10,49 @@ body {
     margin: 0;
     background-color: #131313;
 }
+
+body, .input {
+    font-family: cursive;
+}
+
+.container {
+    background-color: #797474;
+    padding: 2rem;
+    border-radius: .5rem;
+    width: 700px;
+    max-width: 90%;
+}
+
+.quotes_display {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    margin-left: calc(1rem + 2px);
+    margin-right: calc(1rem + 2px);
+}
+
+.timer {
+    position: absolute;
+    top: 2rem;
+    font-size: 3rem;
+    color:#797474;
+    font-weight: bold;
+}
+
+.input {
+    background-color: transparent;
+    border: 2px solid #353333;
+    font-size: 1rem;
+    color: #ffffff;
+    outline: none;
+    width: 100%;
+    height: 8rem;
+    margin: auto;
+    resize: none;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+}
+
+.input:focus {
+    border-color: rgb(208, 208, 224);
+}
