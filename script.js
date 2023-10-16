@@ -5,6 +5,8 @@ const timerElement = document.getElementById('timer')
 
 let correct = true
 
+//condition for correct and incorrect type
+
 inputElement.addEventListener('input', () => {
     const array = displayElement.querySelectorAll('span')
     const value = inputElement.value.split('')
@@ -27,11 +29,15 @@ inputElement.addEventListener('input', () => {
     if(correct) renderRandom()
 })
 
+//fetching data
+
 function getRandom() {
     return fetch(RANDOM_QUOTES_API_URL)
         .then(response => response.json())
         .then(data => data.content)
 }
+
+// get ramdom content
 
 async function renderRandom() {
     const quote = await getRandom()
@@ -45,6 +51,8 @@ async function renderRandom() {
     startTimer()
 }
 
+//timer
+
 let startTime
 function startTimer(){
     timerElement.innerText = 0
@@ -53,6 +61,8 @@ function startTimer(){
         timerElement.innerText = getTimerTime()
     }, 1000);
 }
+
+//set time
 
 function getTimerTime() {
     return Math.floor((new Date() - startTime) / 1000)
